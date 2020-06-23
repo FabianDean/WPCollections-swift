@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State static public var bottomSheetShown = false
     var body: some View {
-        Text("Hello, world!").padding()
+        NavigationView {
+            HomeView()
+        }
     }
 }
 

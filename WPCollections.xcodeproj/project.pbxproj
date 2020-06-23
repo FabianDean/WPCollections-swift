@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		1F86CB4D24A1C13500426B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F86CB4B24A1C13500426B33 /* LaunchScreen.storyboard */; };
 		1F86CB5824A1C13600426B33 /* WPCollectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB5724A1C13600426B33 /* WPCollectionsTests.swift */; };
 		1F86CB6324A1C13600426B33 /* WPCollectionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB6224A1C13600426B33 /* WPCollectionsUITests.swift */; };
+		1F86CB7124A1C3C800426B33 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB7024A1C3C800426B33 /* HomeView.swift */; };
+		1F86CB7424A1C88400426B33 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB7324A1C88400426B33 /* BottomSheetView.swift */; };
+		1FF62C7224A1DA0A00399C44 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF62C7124A1DA0A00399C44 /* LibraryView.swift */; };
+		1FF62C7524A1DEA000399C44 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = 1FF62C7424A1DEA000399C44 /* ModalView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		1F86CB5E24A1C13600426B33 /* WPCollectionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WPCollectionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F86CB6224A1C13600426B33 /* WPCollectionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPCollectionsUITests.swift; sourceTree = "<group>"; };
 		1F86CB6424A1C13600426B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F86CB7024A1C3C800426B33 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1F86CB7324A1C88400426B33 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		1FF62C7124A1DA0A00399C44 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF62C7524A1DEA000399C44 /* ModalView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +110,9 @@
 				1F86CB4024A1C13400426B33 /* AppDelegate.swift */,
 				1F86CB4224A1C13400426B33 /* SceneDelegate.swift */,
 				1F86CB4424A1C13400426B33 /* ContentView.swift */,
+				1F86CB7024A1C3C800426B33 /* HomeView.swift */,
+				1FF62C7124A1DA0A00399C44 /* LibraryView.swift */,
+				1F86CB7224A1C86A00426B33 /* utils */,
 				1F86CB4624A1C13500426B33 /* Assets.xcassets */,
 				1F86CB4B24A1C13500426B33 /* LaunchScreen.storyboard */,
 				1F86CB4E24A1C13500426B33 /* Info.plist */,
@@ -136,6 +147,14 @@
 			path = WPCollectionsUITests;
 			sourceTree = "<group>";
 		};
+		1F86CB7224A1C86A00426B33 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				1F86CB7324A1C88400426B33 /* BottomSheetView.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +171,9 @@
 			dependencies = (
 			);
 			name = WPCollections;
+			packageProductDependencies = (
+				1FF62C7424A1DEA000399C44 /* ModalView */,
+			);
 			productName = WPCollections;
 			productReference = 1F86CB3D24A1C13400426B33 /* WPCollections.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 1F86CB3424A1C13400426B33;
+			packageReferences = (
+				1FF62C7324A1DEA000399C44 /* XCRemoteSwiftPackageReference "modal-view" */,
+			);
 			productRefGroup = 1F86CB3E24A1C13400426B33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,7 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F86CB4124A1C13400426B33 /* AppDelegate.swift in Sources */,
+				1F86CB7424A1C88400426B33 /* BottomSheetView.swift in Sources */,
+				1F86CB7124A1C3C800426B33 /* HomeView.swift in Sources */,
 				1F86CB4324A1C13400426B33 /* SceneDelegate.swift in Sources */,
+				1FF62C7224A1DA0A00399C44 /* LibraryView.swift in Sources */,
 				1F86CB4524A1C13400426B33 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +625,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1FF62C7324A1DEA000399C44 /* XCRemoteSwiftPackageReference "modal-view" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diniska/modal-view";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FF62C7424A1DEA000399C44 /* ModalView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FF62C7324A1DEA000399C44 /* XCRemoteSwiftPackageReference "modal-view" */;
+			productName = ModalView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F86CB3524A1C13400426B33 /* Project object */;
 }
