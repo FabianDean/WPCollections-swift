@@ -9,12 +9,16 @@ import SwiftUI
 
 struct LibraryView: View {
     var body: some View {
-        Text("Test")
+        VStack {
+            Text("Test")
+        }
     }
 }
 
+#if DEBUG
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
     }
 }
+#endif

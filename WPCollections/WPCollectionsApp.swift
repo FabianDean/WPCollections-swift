@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import ModalView
 
 struct WPCollectionsApp: View {
     var body: some View {
-        HomeView()
+        NavigationView {
+        ModalPresenter {
+            HomeView()
+        }
+        }
     }
 }
 
