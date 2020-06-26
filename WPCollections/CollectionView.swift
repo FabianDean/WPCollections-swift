@@ -12,6 +12,7 @@ struct CollectionView: View {
     var body: some View {
         VStack {
             Text("\(item)")
+                .font(.largeTitle)
         }
             .navigationTitle("Collection")
             .navigationBarItems(trailing: Text("Add Item"))

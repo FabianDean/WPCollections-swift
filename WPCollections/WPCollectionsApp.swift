@@ -11,9 +11,9 @@ import ModalView
 struct WPCollectionsApp: View {
     var body: some View {
         NavigationView {
-        ModalPresenter {
-            HomeView()
-        }
+            ModalPresenter {
+                HomeView()
+            }
         }
     }
 }

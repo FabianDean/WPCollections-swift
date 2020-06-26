@@ -14,12 +14,13 @@ struct HomeView: View {
             ZStack {
                 ScrollView {
                     VStack {
-                        Rectangle().frame(height: 40).foregroundColor(Color.clear)
+                        Rectangle().frame(height: 20).foregroundColor(Color.clear)
                         ForEach(0..<10) { item in
                             NavigationLink(destination: CollectionView(item: "\(item+1)")) {
                                 HStack {
                                     Spacer()
                                     Text("\(item+1)")
+                                        .font(.title)
                                     Spacer()
                                 }
                             }
@@ -42,10 +43,9 @@ struct HomeView: View {
                         Spacer()
                     }
                 }
-            }}.navigationTitle("Collections")
+            }
+        }.navigationTitle("Collections")
     }
-    
-    
 }
 
 struct MyModalView: View {
