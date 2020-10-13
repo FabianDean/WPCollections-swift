@@ -32,7 +32,7 @@ struct HomeView: View {
                     }
                 }
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 10))
-                FAB(title: "Library", view: LibraryView(), icon: "list.bullet", align: ALIGNMENT.left)
+                FAB(title: "Search", view: SearchView(), icon: "list.bullet", align: ALIGNMENT.left)
             }
         }
         .navigationTitle("Collections")

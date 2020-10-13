@@ -45,6 +45,6 @@ struct FAB<Content: View>: View {
 
 struct FABView_Previews: PreviewProvider {
     static var previews: some View {
-        FAB(title: "Library", view: LibraryView(), icon: "list.bullet", align: ALIGNMENT.left)
+        FAB(title: "Library", view: SearchView(), icon: "list.bullet", align: ALIGNMENT.left)
     }
 }

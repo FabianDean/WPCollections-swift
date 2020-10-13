@@ -11,6 +11,7 @@
 		1F73F139253526CD00052B49 /* CollectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F136253526CD00052B49 /* CollectionRow.swift */; };
 		1F73F13A253526CD00052B49 /* NewModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F137253526CD00052B49 /* NewModalView.swift */; };
 		1F73F14F2535587400052B49 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F14E2535587400052B49 /* Collection.swift */; };
+		1F73F1692535817E00052B49 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F1682535817E00052B49 /* SearchBar.swift */; };
 		1F86CB4124A1C13400426B33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4024A1C13400426B33 /* AppDelegate.swift */; };
 		1F86CB4324A1C13400426B33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4224A1C13400426B33 /* SceneDelegate.swift */; };
 		1F86CB4524A1C13400426B33 /* WPCollectionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4424A1C13400426B33 /* WPCollectionsApp.swift */; };
@@ -22,7 +23,7 @@
 		1F86CB7124A1C3C800426B33 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB7024A1C3C800426B33 /* HomeView.swift */; };
 		1F86CB7424A1C88400426B33 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB7324A1C88400426B33 /* BottomSheetView.swift */; };
 		1FB217AB24A2D84C007F8DC1 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB217AA24A2D84C007F8DC1 /* CollectionView.swift */; };
-		1FF62C7224A1DA0A00399C44 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF62C7124A1DA0A00399C44 /* LibraryView.swift */; };
+		1FF62C7224A1DA0A00399C44 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF62C7124A1DA0A00399C44 /* SearchView.swift */; };
 		1FF62C7524A1DEA000399C44 /* ModalView in Frameworks */ = {isa = PBXBuildFile; productRef = 1FF62C7424A1DEA000399C44 /* ModalView */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		1F73F136253526CD00052B49 /* CollectionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionRow.swift; sourceTree = "<group>"; };
 		1F73F137253526CD00052B49 /* NewModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewModalView.swift; sourceTree = "<group>"; };
 		1F73F14E2535587400052B49 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		1F73F1682535817E00052B49 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		1F86CB3D24A1C13400426B33 /* WPCollections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPCollections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F86CB4024A1C13400426B33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F86CB4224A1C13400426B33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		1F86CB7024A1C3C800426B33 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1F86CB7324A1C88400426B33 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		1FB217AA24A2D84C007F8DC1 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
-		1FF62C7124A1DA0A00399C44 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		1FF62C7124A1DA0A00399C44 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				1F73F136253526CD00052B49 /* CollectionRow.swift */,
 				1F73F135253526CD00052B49 /* FAB.swift */,
 				1F73F137253526CD00052B49 /* NewModalView.swift */,
+				1F73F1682535817E00052B49 /* SearchBar.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -141,7 +144,7 @@
 				1F86CB4224A1C13400426B33 /* SceneDelegate.swift */,
 				1F86CB4424A1C13400426B33 /* WPCollectionsApp.swift */,
 				1F86CB7024A1C3C800426B33 /* HomeView.swift */,
-				1FF62C7124A1DA0A00399C44 /* LibraryView.swift */,
+				1FF62C7124A1DA0A00399C44 /* SearchView.swift */,
 				1FB217AA24A2D84C007F8DC1 /* CollectionView.swift */,
 				1F86CB7224A1C86A00426B33 /* utils */,
 				1F86CB4624A1C13500426B33 /* Assets.xcassets */,
@@ -327,10 +330,11 @@
 				1F86CB7424A1C88400426B33 /* BottomSheetView.swift in Sources */,
 				1FB217AB24A2D84C007F8DC1 /* CollectionView.swift in Sources */,
 				1F86CB7124A1C3C800426B33 /* HomeView.swift in Sources */,
+				1F73F1692535817E00052B49 /* SearchBar.swift in Sources */,
 				1F73F138253526CD00052B49 /* FAB.swift in Sources */,
 				1F86CB4324A1C13400426B33 /* SceneDelegate.swift in Sources */,
 				1F73F14F2535587400052B49 /* Collection.swift in Sources */,
-				1FF62C7224A1DA0A00399C44 /* LibraryView.swift in Sources */,
+				1FF62C7224A1DA0A00399C44 /* SearchView.swift in Sources */,
 				1F86CB4524A1C13400426B33 /* WPCollectionsApp.swift in Sources */,
 				1F73F139253526CD00052B49 /* CollectionRow.swift in Sources */,
 			);
