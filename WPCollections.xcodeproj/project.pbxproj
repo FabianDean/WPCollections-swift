@@ -12,6 +12,7 @@
 		1F73F13A253526CD00052B49 /* NewModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F137253526CD00052B49 /* NewModalView.swift */; };
 		1F73F14F2535587400052B49 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F14E2535587400052B49 /* Collection.swift */; };
 		1F73F1692535817E00052B49 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F1682535817E00052B49 /* SearchBar.swift */; };
+		1F73F1792535B9A400052B49 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F1782535B9A400052B49 /* CustomSegmentedControl.swift */; };
 		1F86CB4124A1C13400426B33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4024A1C13400426B33 /* AppDelegate.swift */; };
 		1F86CB4324A1C13400426B33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4224A1C13400426B33 /* SceneDelegate.swift */; };
 		1F86CB4524A1C13400426B33 /* WPCollectionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4424A1C13400426B33 /* WPCollectionsApp.swift */; };
@@ -50,6 +51,7 @@
 		1F73F137253526CD00052B49 /* NewModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewModalView.swift; sourceTree = "<group>"; };
 		1F73F14E2535587400052B49 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		1F73F1682535817E00052B49 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		1F73F1782535B9A400052B49 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		1F86CB3D24A1C13400426B33 /* WPCollections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPCollections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F86CB4024A1C13400426B33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F86CB4224A1C13400426B33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				1F73F135253526CD00052B49 /* FAB.swift */,
 				1F73F137253526CD00052B49 /* NewModalView.swift */,
 				1F73F1682535817E00052B49 /* SearchBar.swift */,
+				1F73F1782535B9A400052B49 /* CustomSegmentedControl.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				1F73F1692535817E00052B49 /* SearchBar.swift in Sources */,
 				1F73F138253526CD00052B49 /* FAB.swift in Sources */,
 				1F86CB4324A1C13400426B33 /* SceneDelegate.swift in Sources */,
+				1F73F1792535B9A400052B49 /* CustomSegmentedControl.swift in Sources */,
 				1F73F14F2535587400052B49 /* Collection.swift in Sources */,
 				1FF62C7224A1DA0A00399C44 /* SearchView.swift in Sources */,
 				1F86CB4524A1C13400426B33 /* WPCollectionsApp.swift in Sources */,
