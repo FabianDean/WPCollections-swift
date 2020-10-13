@@ -8,19 +8,34 @@
 import SwiftUI
 
 struct CollectionView: View {
-    public var item: String;
+    public var item: String
+    @State var showAlert: Bool = false
+    
     var body: some View {
+        NavigationView {
         VStack {
             Text("\(item)")
                 .font(.largeTitle)
-        }
+        }}
             .navigationTitle("Collection")
-            .navigationBarItems(trailing: Text("Add Item"))
+            .navigationBarItems(trailing: Button(
+                                    action: {
+                                        self.showAlert = true
+                                    }, label: {
+                                        HStack {
+                                            Image(systemName: "plus")
+                                                .scaleEffect(1.2, anchor: .center)
+                                            Text("Add")
+                                        }
+                                    }))
+            .alert(isPresented: $showAlert, content: {
+                Alert(title: Text("Collection"), message: Text("\(self.item)"))
+            })
     }
 }
 
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionView(item: "")
+        CollectionView(item: "24", showAlert: true)
     }
 }

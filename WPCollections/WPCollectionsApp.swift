@@ -21,6 +21,5 @@ struct WPCollectionsApp: View {
 struct WPCollectionsApp_Previews: PreviewProvider {
     static var previews: some View {
         WPCollectionsApp()
-        
     }
 }
