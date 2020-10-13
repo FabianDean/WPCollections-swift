@@ -12,11 +12,12 @@ struct CollectionView: View {
     @State var showAlert: Bool = false
     
     var body: some View {
-        NavigationView {
-        VStack {
-            Text("\(item)")
-                .font(.largeTitle)
-        }}
+        VStack(alignment: .leading) {
+                Text("\(item)")
+                    .font(.title)
+                Spacer()
+        }
+            .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 10))
             .navigationTitle("Collection")
             .navigationBarItems(trailing: Button(
                                     action: {
@@ -24,7 +25,7 @@ struct CollectionView: View {
                                     }, label: {
                                         HStack {
                                             Image(systemName: "plus")
-                                                .scaleEffect(1.2, anchor: .center)
+                                                .scaleEffect(1.1, anchor: .center)
                                             Text("Add")
                                         }
                                     }))

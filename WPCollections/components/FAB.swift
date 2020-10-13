@@ -1,5 +1,5 @@
 //
-//  FABView.swift
+//  FAB.swift
 //  WPCollections
 //
 //  Created by Fabian Flores on 10/12/20.
@@ -12,7 +12,7 @@ enum ALIGNMENT {
     case left, right
 }
 
-struct FABView<Content: View>: View {
+struct FAB<Content: View>: View {
     public var title: String
     public var view: Content
     public var icon: String
@@ -45,6 +45,6 @@ struct FABView<Content: View>: View {
 
 struct FABView_Previews: PreviewProvider {
     static var previews: some View {
-        FABView(title: "Library", view: LibraryView(), icon: "list.bullet", align: ALIGNMENT.left)
+        FAB(title: "Library", view: LibraryView(), icon: "list.bullet", align: ALIGNMENT.left)
     }
 }

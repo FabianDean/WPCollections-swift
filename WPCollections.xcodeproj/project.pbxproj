@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F73F138253526CD00052B49 /* FABView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F135253526CD00052B49 /* FABView.swift */; };
-		1F73F139253526CD00052B49 /* CollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F136253526CD00052B49 /* CollectionCellView.swift */; };
+		1F73F138253526CD00052B49 /* FAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F135253526CD00052B49 /* FAB.swift */; };
+		1F73F139253526CD00052B49 /* CollectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F136253526CD00052B49 /* CollectionRow.swift */; };
 		1F73F13A253526CD00052B49 /* NewModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F137253526CD00052B49 /* NewModalView.swift */; };
+		1F73F14F2535587400052B49 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F14E2535587400052B49 /* Collection.swift */; };
 		1F86CB4124A1C13400426B33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4024A1C13400426B33 /* AppDelegate.swift */; };
 		1F86CB4324A1C13400426B33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4224A1C13400426B33 /* SceneDelegate.swift */; };
 		1F86CB4524A1C13400426B33 /* WPCollectionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4424A1C13400426B33 /* WPCollectionsApp.swift */; };
@@ -43,9 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F73F135253526CD00052B49 /* FABView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FABView.swift; sourceTree = "<group>"; };
-		1F73F136253526CD00052B49 /* CollectionCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellView.swift; sourceTree = "<group>"; };
+		1F73F135253526CD00052B49 /* FAB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAB.swift; sourceTree = "<group>"; };
+		1F73F136253526CD00052B49 /* CollectionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionRow.swift; sourceTree = "<group>"; };
 		1F73F137253526CD00052B49 /* NewModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewModalView.swift; sourceTree = "<group>"; };
+		1F73F14E2535587400052B49 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		1F86CB3D24A1C13400426B33 /* WPCollections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPCollections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F86CB4024A1C13400426B33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F86CB4224A1C13400426B33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,11 +97,19 @@
 		1F73F1302535263C00052B49 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				1F73F136253526CD00052B49 /* CollectionCellView.swift */,
-				1F73F135253526CD00052B49 /* FABView.swift */,
+				1F73F136253526CD00052B49 /* CollectionRow.swift */,
+				1F73F135253526CD00052B49 /* FAB.swift */,
 				1F73F137253526CD00052B49 /* NewModalView.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		1F73F1442535582C00052B49 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				1F73F14E2535587400052B49 /* Collection.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		1F86CB3424A1C13400426B33 = {
@@ -125,6 +135,7 @@
 		1F86CB3F24A1C13400426B33 /* WPCollections */ = {
 			isa = PBXGroup;
 			children = (
+				1F73F1442535582C00052B49 /* models */,
 				1F73F1302535263C00052B49 /* components */,
 				1F86CB4024A1C13400426B33 /* AppDelegate.swift */,
 				1F86CB4224A1C13400426B33 /* SceneDelegate.swift */,
@@ -316,11 +327,12 @@
 				1F86CB7424A1C88400426B33 /* BottomSheetView.swift in Sources */,
 				1FB217AB24A2D84C007F8DC1 /* CollectionView.swift in Sources */,
 				1F86CB7124A1C3C800426B33 /* HomeView.swift in Sources */,
-				1F73F138253526CD00052B49 /* FABView.swift in Sources */,
+				1F73F138253526CD00052B49 /* FAB.swift in Sources */,
 				1F86CB4324A1C13400426B33 /* SceneDelegate.swift in Sources */,
+				1F73F14F2535587400052B49 /* Collection.swift in Sources */,
 				1FF62C7224A1DA0A00399C44 /* LibraryView.swift in Sources */,
 				1F86CB4524A1C13400426B33 /* WPCollectionsApp.swift in Sources */,
-				1F73F139253526CD00052B49 /* CollectionCellView.swift in Sources */,
+				1F73F139253526CD00052B49 /* CollectionRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +512,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.fabiandean.WPCollections;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -521,7 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.fabiandean.WPCollections;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

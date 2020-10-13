@@ -8,24 +8,31 @@
 import SwiftUI
 
 struct HomeView: View {
-    var nums: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    
+    @Environment(\.defaultMinListRowHeight) var minRowHeight
+
     var body: some View {
-        GeometryReader { geometry in
+        var collectionRows: [CollectionRow] = []
+        
+        for i in 1..<11 {
+            collectionRows.append(
+                CollectionRow(collection: Collection(name: "Collection \(i)"))
+            )
+        }
+        
+        return GeometryReader { geometry in
             ZStack {
                 ScrollView {
                     VStack {
-                        ForEach(nums, id: \.self) { num in
-                            NavigationLink(destination: CollectionView(item: "\(num)")) {
-                                HStack {
-                                    CollectionCellView(item: "\(num)")
-                                }
+                        ForEach(collectionRows, id: \.self) { collectionRow in
+                            NavigationLink(destination: CollectionView(item: "\(collectionRow.collection.name)")) {
+                                collectionRow
                             }
-                            .padding()
+                            .frame(maxWidth: .infinity, minHeight: 60, maxHeight: 60)
                         }
                     }
                 }
-                FABView(title: "Library:", view: LibraryView(), icon: "list.bullet", align: ALIGNMENT.left)
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 10))
+                FAB(title: "Library", view: LibraryView(), icon: "list.bullet", align: ALIGNMENT.left)
             }
         }
         .navigationTitle("Collections")
