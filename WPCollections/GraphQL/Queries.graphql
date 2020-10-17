@@ -1,0 +1,17 @@
+query SearchTheme($query: String!) {
+  searchTheme(query: $query) {
+    name
+    description
+    author
+    downloads
+  }
+}
+
+query SearchPlugin($query: String!) {
+  searchPlugin(query: $query) {
+    name
+    description
+    author
+    downloads
+  }
+}

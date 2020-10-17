@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		1F73F14F2535587400052B49 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F14E2535587400052B49 /* Collection.swift */; };
 		1F73F1692535817E00052B49 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F1682535817E00052B49 /* SearchBar.swift */; };
 		1F73F1792535B9A400052B49 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F1782535B9A400052B49 /* CustomSegmentedControl.swift */; };
+		1F73F17E2536611B00052B49 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F17D2536611B00052B49 /* Theme.swift */; };
+		1F73F1832536620B00052B49 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F1822536620B00052B49 /* Plugin.swift */; };
+		1F73F18E253A5EEF00052B49 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 1F73F18D253A5EEF00052B49 /* Apollo */; };
+		1F73F19D253A684D00052B49 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F19C253A684D00052B49 /* API.swift */; };
+		1F73F1A5253A685B00052B49 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73F1A4253A685B00052B49 /* Apollo.swift */; };
 		1F86CB4124A1C13400426B33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4024A1C13400426B33 /* AppDelegate.swift */; };
 		1F86CB4324A1C13400426B33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4224A1C13400426B33 /* SceneDelegate.swift */; };
 		1F86CB4524A1C13400426B33 /* WPCollectionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86CB4424A1C13400426B33 /* WPCollectionsApp.swift */; };
@@ -52,6 +57,12 @@
 		1F73F14E2535587400052B49 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		1F73F1682535817E00052B49 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		1F73F1782535B9A400052B49 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		1F73F17D2536611B00052B49 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1F73F1822536620B00052B49 /* Plugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
+		1F73F19C253A684D00052B49 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		1F73F1A4253A685B00052B49 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
+		1F73F1D3253B945900052B49 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = schema.json; path = GraphQL/schema.json; sourceTree = "<group>"; };
+		1F73F1DA253B9BF900052B49 /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		1F86CB3D24A1C13400426B33 /* WPCollections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPCollections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F86CB4024A1C13400426B33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F86CB4224A1C13400426B33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FF62C7524A1DEA000399C44 /* ModalView in Frameworks */,
+				1F73F18E253A5EEF00052B49 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,8 +126,20 @@
 			isa = PBXGroup;
 			children = (
 				1F73F14E2535587400052B49 /* Collection.swift */,
+				1F73F17D2536611B00052B49 /* Theme.swift */,
+				1F73F1822536620B00052B49 /* Plugin.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		1F73F19B253A682E00052B49 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				1F73F19C253A684D00052B49 /* API.swift */,
+				1F73F1A4253A685B00052B49 /* Apollo.swift */,
+				1F73F1DA253B9BF900052B49 /* Queries.graphql */,
+			);
+			path = GraphQL;
 			sourceTree = "<group>";
 		};
 		1F86CB3424A1C13400426B33 = {
@@ -141,6 +165,7 @@
 		1F86CB3F24A1C13400426B33 /* WPCollections */ = {
 			isa = PBXGroup;
 			children = (
+				1F73F19B253A682E00052B49 /* GraphQL */,
 				1F73F1442535582C00052B49 /* models */,
 				1F73F1302535263C00052B49 /* components */,
 				1F86CB4024A1C13400426B33 /* AppDelegate.swift */,
@@ -153,6 +178,7 @@
 				1F86CB4624A1C13500426B33 /* Assets.xcassets */,
 				1F86CB4B24A1C13500426B33 /* LaunchScreen.storyboard */,
 				1F86CB4E24A1C13500426B33 /* Info.plist */,
+				1F73F1D3253B945900052B49 /* schema.json */,
 				1F86CB4824A1C13500426B33 /* Preview Content */,
 			);
 			path = WPCollections;
@@ -199,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F86CB6724A1C13600426B33 /* Build configuration list for PBXNativeTarget "WPCollections" */;
 			buildPhases = (
+				1F73F19A253A67AB00052B49 /* Generate Apollo GraphQL API */,
 				1F86CB3924A1C13400426B33 /* Sources */,
 				1F86CB3A24A1C13400426B33 /* Frameworks */,
 				1F86CB3B24A1C13400426B33 /* Resources */,
@@ -210,6 +237,7 @@
 			name = WPCollections;
 			packageProductDependencies = (
 				1FF62C7424A1DEA000399C44 /* ModalView */,
+				1F73F18D253A5EEF00052B49 /* Apollo */,
 			);
 			productName = WPCollections;
 			productReference = 1F86CB3D24A1C13400426B33 /* WPCollections.app */;
@@ -284,6 +312,7 @@
 			mainGroup = 1F86CB3424A1C13400426B33;
 			packageReferences = (
 				1FF62C7324A1DEA000399C44 /* XCRemoteSwiftPackageReference "modal-view" */,
+				1F73F18C253A5EEF00052B49 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 1F86CB3E24A1C13400426B33 /* Products */;
 			projectDirPath = "";
@@ -323,6 +352,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F73F19A253A67AB00052B49 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the \n# Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n \"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" GraphQL/API.swift\n\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"http://wpcollections.herokuapp.com/graphql\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F86CB3924A1C13400426B33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -331,6 +382,8 @@
 				1F86CB4124A1C13400426B33 /* AppDelegate.swift in Sources */,
 				1F73F13A253526CD00052B49 /* NewModalView.swift in Sources */,
 				1F86CB7424A1C88400426B33 /* BottomSheetView.swift in Sources */,
+				1F73F1A5253A685B00052B49 /* Apollo.swift in Sources */,
+				1F73F1832536620B00052B49 /* Plugin.swift in Sources */,
 				1FB217AB24A2D84C007F8DC1 /* CollectionView.swift in Sources */,
 				1F86CB7124A1C3C800426B33 /* HomeView.swift in Sources */,
 				1F73F1692535817E00052B49 /* SearchBar.swift in Sources */,
@@ -341,6 +394,8 @@
 				1FF62C7224A1DA0A00399C44 /* SearchView.swift in Sources */,
 				1F86CB4524A1C13400426B33 /* WPCollectionsApp.swift in Sources */,
 				1F73F139253526CD00052B49 /* CollectionRow.swift in Sources */,
+				1F73F19D253A684D00052B49 /* API.swift in Sources */,
+				1F73F17E2536611B00052B49 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +726,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1F73F18C253A5EEF00052B49 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.35.0;
+			};
+		};
 		1FF62C7324A1DEA000399C44 /* XCRemoteSwiftPackageReference "modal-view" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/diniska/modal-view";
@@ -682,6 +745,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1F73F18D253A5EEF00052B49 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F73F18C253A5EEF00052B49 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
 		1FF62C7424A1DEA000399C44 /* ModalView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1FF62C7324A1DEA000399C44 /* XCRemoteSwiftPackageReference "modal-view" */;
