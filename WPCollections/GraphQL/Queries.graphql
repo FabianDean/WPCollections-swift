@@ -3,7 +3,12 @@ query SearchTheme($query: String!) {
     name
     description
     author
+    slug
+    homepage
     downloads
+    rating
+    screenshot_url
+    preview_url
   }
 }
 
@@ -11,7 +16,59 @@ query SearchPlugin($query: String!) {
   searchPlugin(query: $query) {
     name
     description
+    short_description
     author
+    slug
+    homepage
     downloads
+    rating
+    ratings {
+        one
+        two
+        three
+        four
+        five
+    }
   }
+}
+
+query GetThemeInfo($slug: String!) {
+    getThemeInfo(slug: $slug) {
+        name
+        author
+        slug
+        homepage
+        description
+        downloads
+        rating
+        screenshot_url
+        preview_url
+    }
+}
+
+query GetPluginInfo($slug: String!) {
+    getPluginInfo(slug: $slug) {
+        name
+        author
+        slug
+        homepage
+        description
+        downloads
+        rating
+        ratings {
+            one
+            two
+            three
+            four
+            five
+        }
+        screenshots {
+            src
+            caption
+        }
+        banners {
+            low
+            high
+        }
+    }
 }

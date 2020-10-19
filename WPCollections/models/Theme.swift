@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ThemeResponse: Codable {
+struct ThemeListData: Codable {
     var themes: [Theme]
 }
 
