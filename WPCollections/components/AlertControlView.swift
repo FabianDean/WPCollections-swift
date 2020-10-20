@@ -9,6 +9,7 @@ struct AlertControlView: UIViewControllerRepresentable {
     
     var title: String
     var message: String
+    var primaryActionText: String
     
     func makeCoordinator() -> AlertControlView.Coordinator {
       Coordinator(self)
@@ -53,7 +54,7 @@ struct AlertControlView: UIViewControllerRepresentable {
 
             // Adds UITextField & make sure that coordinator is delegate to UITextField.
             alert.addTextField { textField in
-                textField.placeholder = "Enter some text"
+                textField.placeholder = ""  // keep placeholder empty
                 textField.text = self.input            // setting initial value
                 textField.delegate = context.coordinator    // using coordinator as delegate
             }
@@ -67,7 +68,7 @@ struct AlertControlView: UIViewControllerRepresentable {
                 }
             })
 
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Submit", comment: ""), style: .default) { _ in
+            alert.addAction(UIAlertAction(title: NSLocalizedString(self.primaryActionText, comment: ""), style: .default) { _ in
                 // On submit action, get texts from TextField & set it on SwiftUI View's two-way binding varaible `input` so that View receives enter response.
                 if let textField = alert.textFields?.first, let text = textField.text {
                     self.input = text

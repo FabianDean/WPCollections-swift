@@ -46,7 +46,7 @@ struct HomeView: View {
                 }
                 
                 if self.showAlert {
-                    AlertControlView(input: $alertInput, showAlert: $showAlert, title: "New Collection", message: "Choose a name for your new collection")
+                    AlertControlView(input: $alertInput, showAlert: $showAlert, title: "Add Collection", message: "Choose a name for your new collection", primaryActionText: "Add")
                 }
             }
         }
@@ -58,7 +58,7 @@ struct HomeView: View {
                                     HStack {
                                         Image(systemName: "plus")
                                             .scaleEffect(1.1, anchor: .center)
-                                        Text("Add Collection")
+                                        Text("New Collection")
                                     }
                                 }))
     }
