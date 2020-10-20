@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import ModalView
 
 struct HomeView: View {
     @Environment(\.defaultMinListRowHeight) var minRowHeight
-
+    @State var showAlert: Bool = false
+    @State var alertInput: String = ""
+    
     var body: some View {
         var collectionRows: [CollectionRow] = []
         
@@ -31,11 +34,33 @@ struct HomeView: View {
                         }
                     }
                 }
-                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 10))
-                FAB(title: "Search", view: SearchView(), icon: "list.bullet", align: ALIGNMENT.left)
+                    .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 10))
+                
+                FAB(align: ALIGNMENT.left) {
+                    ModalLink(destination: {dismiss in NewModalView(title: "Search", view: SearchView(), dismiss: dismiss)}) {
+                        Image(systemName: "magnifyingglass")
+                            .scaleEffect(1.3, anchor: .center)
+                            .padding(EdgeInsets.init(top: 17.0, leading: 15.0, bottom: 17.0, trailing: 15.0))
+                            .foregroundColor(.white)
+                    }
+                }
+                
+                if self.showAlert {
+                    AlertControlView(input: $alertInput, showAlert: $showAlert, title: "New Collection", message: "Choose a name for your new collection")
+                }
             }
         }
         .navigationTitle("Collections")
+        .navigationBarItems(trailing: Button(
+                                action: {
+                                    self.showAlert = true
+                                }, label: {
+                                    HStack {
+                                        Image(systemName: "plus")
+                                            .scaleEffect(1.1, anchor: .center)
+                                        Text("Add Collection")
+                                    }
+                                }))
     }
 }
 

@@ -11,7 +11,7 @@ struct SearchView: View {
     @State private var selectorIndex = 0
     @State private var resultTypes = ["Themes","Plugins"]
     @State var query: String = ""
-    @State var text: String = "Search for your favorite themes and plugins"
+    @State var text: String = ""
     @State var themes: [Any] = [Any]()
     
     func loadThemesFromAPI(q: String) -> Void {
@@ -25,11 +25,11 @@ struct SearchView: View {
 //                            // Example: accessing property
 //                            if let name = next["name"] as? String {
 //                                print("\(name)")
-//                            }
+//
                         }
                     }
                     self.text = "\(self.themes)"
-                    print("Success!")// Result: \(String(describing: self.themes))")
+                    print("Success!") // Result: \(String(describing: self.themes))")
                     
                   case .failure(let error):
                     print("Failure! Error: \(error)")
@@ -37,10 +37,9 @@ struct SearchView: View {
         }
     }
     
-    // [Placeholder] replace with call to API for results
-    func updateText() -> Void {
-        let type: String = resultTypes[selectorIndex]
-        self.text = "\(type): \(self.query)"
+    func getThemesFromAPI() -> Void {
+        //let type: String = resultTypes[selectorIndex]
+        self.text = "Loading..."
         if !self.query.isEmpty {
             self.themes = [] // reset themes array
             loadThemesFromAPI(q: self.query)
@@ -51,12 +50,15 @@ struct SearchView: View {
         VStack {
             HStack {
                 VStack {
-                    SearchBar(placeholder: "Search", text: $query, action: updateText)
-                    CustomSegmentedControl(name: "Results", selectorIndex: $selectorIndex, controls: resultTypes)
-                      
-                    Text("Selected value is: \(resultTypes[selectorIndex])").padding()
-                    Text("\($text.wrappedValue)")
-                    Spacer()
+                    VStack {
+                        SearchBar(text: $query, placeholder: "Search", action: getThemesFromAPI)
+                        CustomSegmentedControl(name: "Results", selectorIndex: $selectorIndex, controls: resultTypes)
+                    }
+                    ScrollView {
+                        //Text("Selected value is: \(resultTypes[selectorIndex])").padding()
+                        Text("\($text.wrappedValue)")
+                        Spacer()
+                    }
                 }
             }
                 .background(Color.clear.contentShape(Rectangle()))

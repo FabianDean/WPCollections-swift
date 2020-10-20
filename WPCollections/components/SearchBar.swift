@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct SearchBar: View {
-    public var placeholder: String
-    @Binding var text: String
-    public var action: () -> Void
     @Environment(\.colorScheme) var colorScheme
+    @Binding var text: String
+    public var placeholder: String
+    public var action: () -> Void
 
     var backgroundColor: Color {
       if colorScheme == .dark {
@@ -55,6 +55,6 @@ extension UIApplication {
 struct SearchBar_Previews: PreviewProvider {
     @State static var test = ""
     static var previews: some View {
-        SearchBar(placeholder: "Search", text: $test, action: {} )
+        SearchBar( text: $test, placeholder: "Search", action: {} )
     }
 }
